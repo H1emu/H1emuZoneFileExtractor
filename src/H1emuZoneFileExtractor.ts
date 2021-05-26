@@ -5,7 +5,7 @@ import fs from "fs";
 
 const log = (string:string)=>process.stdout.write(string)
 
-const z1_json:ZoneFile = (readZone(fs.readFileSync("../examples/Z1_from15janv2015.zone"), 0) as ZoneFile);
+const z1_json:ZoneFile = (readZone(fs.readFileSync(`${__dirname}/../examples/Z1_from15janv2015.zone`), 0) as ZoneFile);
 
 const z1_doors:ZoneObject[] = [];
 const z1_items:ZoneObject[] = [];
@@ -31,8 +31,8 @@ z1_json.objects.forEach((object: ZoneObject) => {
 	}
 });
 log("Data extracted, start writing.\n")
-fs.existsSync("../data") || fs.mkdirSync("../data")
-fs.writeFileSync("../data/Z1_doors.json", JSON.stringify(z1_doors))
-fs.writeFileSync("../data/Z1_items.json",JSON.stringify(z1_items))
-fs.writeFileSync("../data/Z1_npcs.json", JSON.stringify(z1_npcs))
+fs.existsSync(`${__dirname}/../data`) || fs.mkdirSync(`${__dirname}/../data`)
+fs.writeFileSync(`${__dirname}/../data/Z1_doors.json`, JSON.stringify(z1_doors))
+fs.writeFileSync(`${__dirname}/../data/Z1_items.json`,JSON.stringify(z1_items))
+fs.writeFileSync(`${__dirname}/../data/Z1_npcs.json`, JSON.stringify(z1_npcs))
 log("Extraction ended")
