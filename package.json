@@ -1,0 +1,30 @@
+{
+  "name": "h1emuzonefileextractor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./out/H1emuZoneFileExtractor.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "install": "npm run build",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@types/node": "^15.6.1",
+    "eul2quat": "^1.0.0",
+    "h1emu-zone2json": "^1.0.0",
+    "h1z1-dataschema": "^1.2.0",
+    "typescript": "^4.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H1emu/H1emuZoneFileExtractor.git"
+  },
+  "author": "Quentin Gruber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/H1emu/H1emuZoneFileExtractor/issues"
+  },
+  "homepage": "https://github.com/H1emu/H1emuZoneFileExtractor#readme"
+}
