@@ -17,7 +17,7 @@ z1_json.objects.forEach((object: ZoneObject) => {
                 position: instance.position,
                 rotation: eul2quat(instance.rotation),
                 id: instance.id
-            }  as Instance
+            }
 		})
 		z1_doors.push(object)
 	}
@@ -27,7 +27,7 @@ z1_json.objects.forEach((object: ZoneObject) => {
                 position: instance.position,
                 rotation: eul2quat(instance.rotation),
                 id: instance.id
-            }  as Instance
+            }
 		})
 		z1_items.push(object)
 	}
@@ -37,7 +37,7 @@ z1_json.objects.forEach((object: ZoneObject) => {
                 position: instance.position,
                 rotation: eul2quat(instance.rotation),
                 id: instance.id
-            }  as Instance
+            }
 		})
 		z1_npcs.push(object)
 	}
