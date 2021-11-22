@@ -63,10 +63,7 @@ export interface Flora {
 export interface Instance {
   position: number[];
   rotation: number[];
-  scale: number[];
   id: number;
-  unknownByte1: number;
-  unknownFloat1: number;
 }
 
 export interface Decal {

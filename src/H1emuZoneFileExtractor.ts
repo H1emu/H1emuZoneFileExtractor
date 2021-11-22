@@ -12,20 +12,32 @@ const z1_items:ZoneObject[] = [];
 const z1_npcs:ZoneObject[] = [];
 z1_json.objects.forEach((object: ZoneObject) => {
 	if (object.actorDefinition.includes("_Placer")) {
-		object.instances.forEach((instance: Instance) => {
-			instance.rotation = eul2quat(instance.rotation )
+		object.instances = object.instances.map((instance: Instance) => {
+			return{
+                position: instance.position,
+                rotation: eul2quat(instance.rotation),
+                id: instance.id
+            }  as Instance
 		})
 		z1_doors.push(object)
 	}
 	else if (object.actorDefinition.includes("ItemSpawner")) {
-		object.instances.forEach((instance: Instance) => {
-			instance.rotation = eul2quat(instance.rotation )
+		object.instances = object.instances.map((instance: Instance) => {
+			return{
+                position: instance.position,
+                rotation: eul2quat(instance.rotation),
+                id: instance.id
+            }  as Instance
 		})
 		z1_items.push(object)
 	}
 	else if (object.actorDefinition.includes("NPCSpawner")) {
-		object.instances.forEach((instance: Instance) => {
-			instance.rotation = eul2quat(instance.rotation )
+		object.instances = object.instances.map((instance: Instance) => {
+			return{
+                position: instance.position,
+                rotation: eul2quat(instance.rotation),
+                id: instance.id
+            }  as Instance
 		})
 		z1_npcs.push(object)
 	}
