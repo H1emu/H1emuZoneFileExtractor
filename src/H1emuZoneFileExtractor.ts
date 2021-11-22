@@ -32,7 +32,7 @@ z1_json.objects.forEach((object: ZoneObject) => {
 });
 log("Data extracted, start writing.\n")
 fs.existsSync(`${__dirname}/../data`) || fs.mkdirSync(`${__dirname}/../data`)
-fs.writeFileSync(`${__dirname}/../data/Z1_doors.json`, JSON.stringify(z1_doors))
-fs.writeFileSync(`${__dirname}/../data/Z1_items.json`,JSON.stringify(z1_items))
-fs.writeFileSync(`${__dirname}/../data/Z1_npcs.json`, JSON.stringify(z1_npcs))
+fs.writeFileSync(`${__dirname}/../data/Z1_doors.json`, JSON.stringify(z1_doors, null, 4))
+fs.writeFileSync(`${__dirname}/../data/Z1_items.json`,JSON.stringify(z1_items, null, 4))
+fs.writeFileSync(`${__dirname}/../data/Z1_npcs.json`, JSON.stringify(z1_npcs, null, 4))
 log("Extraction ended")
